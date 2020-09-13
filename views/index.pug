@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  form(action="/", method="POST")
+    input(type="text" name="request" placeholder="sql request")
+  h2 PSQL Request:
+  h3 #{request}
+  h2 PSQL Response:
+  p #{response}
+
+
