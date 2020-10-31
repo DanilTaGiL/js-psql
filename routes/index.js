@@ -10,15 +10,15 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/', function(req, res) {
-  db.query(req.body.request).then(function(data) {
-    console.log(data);
-    res.render('index', {request: req.body.request, response: JSON.stringify(data)});
-    query = data;
-  }).catch(function (err) {
-    console.log(err);
-    res.render('index', {request: req.body.request, response: "error"});
-  });
-});
+// router.post('/', function(req, res) {
+//   db.query(req.body.request).then(function(data) {
+//     console.log(data);
+//     res.render('index', {request: req.body.request, response: JSON.stringify(data)});
+//     query = data;
+//   }).catch(function (err) {
+//     console.log(err);
+//     res.render('index', {request: req.body.request, response: "error"});
+//   });
+// });
 
 module.exports = router;
